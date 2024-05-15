@@ -136,8 +136,11 @@ let judge = winLose(user_hand, js_hand);
 // 結果を表示する
 if(user_hand == 'グー' || user_hand == 'チョキ' || user_hand == 'パー'){
   alert('あなたの選んだ手は' + user_hand + 'です。\nJavaScriptの選んだ手は' + js_hand + 'です。\n結果は' + judge + 'です。');
+} else if (user_hand == null){
+  alert('またチャレンジしてね');
 } else {
-  alert('「グー」「チョキ」「パー」のいづれかを入力してください。')
+  alert('グー・チョキ・パーのいずれかを入力してください');
+  let user_hand = prompt('じゃんけんの手をグー、チョキ、パーから選んでください。');
 }
 
 // ランダムでじゃんけんの手を作成する関数
